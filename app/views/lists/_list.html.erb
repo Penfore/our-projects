@@ -1,0 +1,34 @@
+<div class="flex-shrink-0 w-80 bg-gray-100 rounded-lg p-4"
+     data-controller="sortable"
+     data-sortable-group-value="cards"
+     data-sortable-url-value="<%= sort_project_list_path(@project, list) %>"
+     data-list-id="<%= list.id %>"
+     id="<%= dom_id(list) %>">
+
+  <!-- List Header -->
+  <div class="flex justify-between items-center mb-4">
+    <h3 class="font-semibold text-gray-800"><%= list.title %></h3>
+    <div class="flex space-x-2">
+      <%= link_to "✏️", "#",
+                  class: "text-gray-500 hover:text-gray-700",
+                  data: { action: "click->list#edit" } %>
+      <%= link_to "🗑️", project_list_path(@project, list),
+                  method: :delete,
+                  class: "text-red-500 hover:text-red-700",
+                  confirm: "Tem certeza?",
+                  data: { turbo_method: :delete } %>
+    </div>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="space-y-3 min-h-[100px]" id="cards_<%= list.id %>">
+    <% list.cards.each do |card| %>
+      <%= render "cards/card", card: card %>
+    <% end %>
+  </div>
+
+  <!-- Add Card Form -->
+  <div class="mt-4">
+    <%= render "cards/new_form", list: list %>
+  </div>
+</div>
