@@ -61,7 +61,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/our_projects.git
+   git clone https://github.com/Penfore/our_projects.git
    cd our_projects
    ```
 
@@ -291,10 +291,10 @@ See also the list of [contributors](https://github.com/Penfore/our_projects/cont
 ## 📈 Project Stats
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/yourusername/our_projects?style=social" alt="GitHub stars" />
-  <img src="https://img.shields.io/github/forks/yourusername/our_projects?style=social" alt="GitHub forks" />
-  <img src="https://img.shields.io/github/issues/yourusername/our_projects" alt="GitHub issues" />
-  <img src="https://img.shields.io/github/issues-pr/yourusername/our_projects" alt="GitHub pull requests" />
+  <img src="https://img.shields.io/github/stars/Penfore/our_projects?style=social" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/forks/Penfore/our_projects?style=social" alt="GitHub forks" />
+  <img src="https://img.shields.io/github/issues/Penfore/our_projects" alt="GitHub issues" />
+  <img src="https://img.shields.io/github/issues-pr/Penfore/our_projects" alt="GitHub pull requests" />
 </div>
 
 ---
