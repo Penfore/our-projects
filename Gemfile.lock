@@ -81,8 +81,6 @@ GEM
     base64 (0.3.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
-    bcrypt_pbkdf (1.1.1-arm64-darwin)
-    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.1)
     bigdecimal (3.2.3)
     bindex (0.8.1)
@@ -209,13 +207,6 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pg (1.6.2)
-    pg (1.6.2-aarch64-linux)
-    pg (1.6.2-aarch64-linux-musl)
-    pg (1.6.2-arm64-darwin)
-    pg (1.6.2-x86_64-darwin)
-    pg (1.6.2-x86_64-linux)
-    pg (1.6.2-x86_64-linux-musl)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -228,7 +219,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (7.0.2)
+    puma (7.0.3)
       nio4r (~> 2.0)
     pundit (2.5.1)
       activesupport (>= 3.0.0)
@@ -353,6 +344,14 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
+    sqlite3 (2.7.3-aarch64-linux-gnu)
+    sqlite3 (2.7.3-aarch64-linux-musl)
+    sqlite3 (2.7.3-arm-linux-gnu)
+    sqlite3 (2.7.3-arm-linux-musl)
+    sqlite3 (2.7.3-arm64-darwin)
+    sqlite3 (2.7.3-x86_64-darwin)
+    sqlite3 (2.7.3-x86_64-linux-gnu)
+    sqlite3 (2.7.3-x86_64-linux-musl)
     sshkit (1.24.0)
       base64
       logger
@@ -412,33 +411,33 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  acts_as_list
+  acts_as_list (~> 1.2, >= 1.2.4)
   bootsnap
   brakeman
   capybara
-  cssbundling-rails
+  cssbundling-rails (~> 1.4, >= 1.4.3)
   debug
-  devise
-  hotwire-rails
-  jbuilder
-  jsbundling-rails
+  devise (~> 4.9, >= 4.9.4)
+  hotwire-rails (~> 0.1.3)
+  jbuilder (~> 2.14, >= 2.14.1)
+  jsbundling-rails (~> 1.3, >= 1.3.1)
   kamal
-  pg (~> 1.1)
   propshaft
-  puma (>= 5.0)
-  pundit
+  puma (~> 7.0, >= 7.0.3)
+  pundit (~> 2.5, >= 2.5.1)
   rails (~> 8.0.2, >= 8.0.2.1)
   rspec-rails
   rubocop-rails-omakase
   selenium-webdriver
-  solid_cable
-  solid_cache
-  solid_queue
-  stimulus-rails
+  solid_cable (~> 3.0, >= 3.0.12)
+  solid_cache (~> 1.0, >= 1.0.7)
+  solid_queue (~> 1.2, >= 1.2.1)
+  sqlite3 (~> 2.7, >= 2.7.3)
+  stimulus-rails (~> 1.3, >= 1.3.4)
   thruster
-  turbo-rails
-  tzinfo-data
-  view_component
+  turbo-rails (~> 2.0, >= 2.0.16)
+  tzinfo-data (~> 1.2025, >= 1.2025.2)
+  view_component (~> 4.0, >= 4.0.2)
   web-console
 
 BUNDLED WITH

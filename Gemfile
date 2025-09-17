@@ -4,31 +4,31 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.2", ">= 8.0.2.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 2.7', '>= 2.7.3'
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
+gem 'puma', '~> 7.0', '>= 7.0.3'
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails"
+gem 'jsbundling-rails', '~> 1.3', '>= 1.3.1'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'turbo-rails', '~> 2.0', '>= 2.0.16'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+gem 'stimulus-rails', '~> 1.3', '>= 1.3.4'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
-gem "cssbundling-rails"
+gem 'cssbundling-rails', '~> 1.4', '>= 1.4.3'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem 'jbuilder', '~> 2.14', '>= 2.14.1'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.2', platforms: %i[ windows jruby ]
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
-gem "solid_cache"
-gem "solid_queue"
-gem "solid_cable"
+gem 'solid_cache', '~> 1.0', '>= 1.0.7'
+gem 'solid_queue', '~> 1.2', '>= 1.2.1'
+gem 'solid_cable', '~> 3.0', '>= 3.0.12'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -42,11 +42,11 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'devise'
-gem 'hotwire-rails'
-gem 'pundit'
-gem 'acts_as_list'
-gem 'view_component'
+gem 'devise', '~> 4.9', '>= 4.9.4'
+gem 'hotwire-rails', '~> 0.1.3'
+gem 'pundit', '~> 2.5', '>= 2.5.1'
+gem 'acts_as_list', '~> 1.2', '>= 1.2.4'
+gem 'view_component', '~> 4.0', '>= 4.0.2'
 gem 'rspec-rails', group: [:development, :test]
 
 group :development, :test do
