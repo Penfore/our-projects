@@ -35,7 +35,7 @@ Examples of behavior that contributes to creating a positive environment include
 
 - Ruby 3.3.0 or later
 - Rails 8.0 or later
-- PostgreSQL 12 or later
+- SQLite 3.8.3 or later
 - Node.js 18 or later
 - Git
 - A code editor (VS Code, RubyMine, etc.)

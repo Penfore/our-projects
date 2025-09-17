@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- 🔄 **Database Migration**: Switched from PostgreSQL to SQLite for simplified development setup
+- 📝 **Documentation Updates**: Updated README and CONTRIBUTING guides with SQLite instructions
+- 🔧 **Development Setup**: Streamlined local development with SQLite (no external database required)
+
 ### Planned
 - Real-time updates with Turbo Streams
 - Drag and drop functionality with SortableJS
@@ -34,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🔧 Development tools (RuboCop, Rails Best Practices)
 
 ### Technical Details
-- Rails 8.0+ with PostgreSQL database
+- Rails 8.0+ with SQLite database (changed from PostgreSQL for development ease)
 - ViewComponent integration for reusable UI components
 - Solid Queue, Solid Cache, and Solid Cable for background processing
 - Modern JavaScript bundling with esbuild

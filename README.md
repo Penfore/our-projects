@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" />
   <img src="https://img.shields.io/badge/Hotwire-Turbo-FF6B6B?style=for-the-badge&logo=hotwire&logoColor=white" alt="Hotwire" />
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
   <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" alt="Version" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome" />
@@ -53,7 +53,7 @@ Before you begin, ensure you have the following installed:
 
 - [Ruby](https://ruby-lang.org/) (3.3.0 or later)
 - [Rails](https://rubyonrails.org/) (8.0 or later)
-- [PostgreSQL](https://postgresql.org/) (12 or later)
+- [SQLite](https://www.sqlite.org/) (3.8.3 or later)
 - [Node.js](https://nodejs.org/) (18 or later)
 - [Git](https://git-scm.com/)
 
@@ -97,7 +97,7 @@ Before you begin, ensure you have the following installed:
 Create a `.env` file in the root directory with:
 
 ```env
-DATABASE_URL=postgresql://username:password@localhost:5432/our_projects_development
+DATABASE_URL=sqlite://db/development.sqlite3
 SECRET_KEY_BASE=your_secret_key_here
 ```
 
@@ -132,7 +132,7 @@ spec/                        # Test specifications
 ### Tech Stack
 
 - **Backend**: Ruby on Rails 8.0+
-- **Database**: PostgreSQL
+- **Database**: SQLite
 - **Frontend**: Hotwire (Turbo + Stimulus)
 - **Styling**: TailwindCSS
 - **Authentication**: Devise
