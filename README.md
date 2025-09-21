@@ -61,8 +61,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Penfore/our_projects.git
-   cd our_projects
+   git clone https://github.com/Penfore/our-projects.git
+   cd our-projects
    ```
 
 2. **Install Ruby dependencies**
@@ -272,12 +272,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **[Fúlvio Leo]** - *Initial work* - [@Penfore](https://github.com/Penfore)
 
-See also the list of [contributors](https://github.com/Penfore/our_projects/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Penfore/our-projects/contributors) who participated in this project.
 
 ## 📞 Support & Community
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Penfore/our_projects/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Penfore/our_projects/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Penfore/our-projects/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Penfore/our-projects/discussions)
 - 📧 **Email**: fulvioleo.dev@pm.me
 
 ## 🙏 Acknowledgments
@@ -286,15 +286,15 @@ See also the list of [contributors](https://github.com/Penfore/our_projects/cont
 - Built with [Ruby on Rails](https://rubyonrails.org/)
 - Styled with [TailwindCSS](https://tailwindcss.com/)
 - Real-time features powered by [Hotwire](https://hotwired.dev/)
-- Thanks to all [contributors](https://github.com/Penfore/our_projects/contributors)
+- Thanks to all [contributors](https://github.com/Penfore/our-projects/contributors)
 
 ## 📈 Project Stats
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/Penfore/our_projects?style=social" alt="GitHub stars" />
-  <img src="https://img.shields.io/github/forks/Penfore/our_projects?style=social" alt="GitHub forks" />
-  <img src="https://img.shields.io/github/issues/Penfore/our_projects" alt="GitHub issues" />
-  <img src="https://img.shields.io/github/issues-pr/Penfore/our_projects" alt="GitHub pull requests" />
+  <img src="https://img.shields.io/github/stars/Penfore/our-projects?style=social" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/forks/Penfore/our-projects?style=social" alt="GitHub forks" />
+  <img src="https://img.shields.io/github/issues/Penfore/our-projects" alt="GitHub issues" />
+  <img src="https://img.shields.io/github/issues-pr/Penfore/our-projects" alt="GitHub pull requests" />
 </div>
 
 ---
