@@ -6,10 +6,10 @@ We currently support the following versions with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
-| < 0.1   | :x:                |
+| 0.0.x   | :white_check_mark: |
+| < 0.0.1 | :x:                |
 
-**Note**: As this project is in early development (v0.1.0), we recommend using only the latest released version.
+**Note**: As this project is in early experimental development (v0.0.1), we recommend using only for development and learning purposes. This version is not intended for production use.
 
 ## Reporting a Vulnerability
 
@@ -100,7 +100,7 @@ When contributing to this project, please:
 
 ## Known Security Limitations
 
-As an early-stage project (v0.1.0), please be aware:
+As an early-stage project (v0.0.1), please be aware:
 
 - This is a development version not intended for production use with sensitive data
 - Security features are still being implemented and refined
