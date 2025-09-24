@@ -2,11 +2,12 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Rails-8.0-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white" alt="Rails 8" />
-  <img src="https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" />
+  <img src="https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" />
   <img src="https://img.shields.io/badge/Hotwire-Turbo-FF6B6B?style=for-the-badge&logo=hotwire&logoColor=white" alt="Hotwire" />
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
   <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.1-red?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/status-experimental-orange?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome" />
 </div>
@@ -20,7 +21,7 @@
 
 ## ✨ Features
 
-> **Note**: This project is in active development (v0.1.0). Core functionality is being implemented following modern Rails best practices.
+> **Note**: This project is in active development (v0.0.1). Core functionality is being implemented following modern Rails best practices.
 
 ### 🚧 **Current Features**
 - 🏗️ **Modern Rails 8 Architecture** - Built with the latest Rails features and conventions ✅
@@ -43,7 +44,7 @@
 
 ## 📱 Screenshots
 
-*Screenshots will be added as features are implemented. Currently showing basic project structure (v0.1.0)*
+*Screenshots will be added as features are implemented. Currently showing basic project structure (v0.0.1)*
 
 ## 🚀 Getting Started
 
@@ -51,7 +52,7 @@
 
 Before you begin, ensure you have the following installed:
 
-- [Ruby](https://ruby-lang.org/) (3.3.0 or later)
+- [Ruby](https://ruby-lang.org/) (3.4.0 or later)
 - [Rails](https://rubyonrails.org/) (8.0 or later)
 - [SQLite](https://www.sqlite.org/) (3.8.3 or later)
 - [Node.js](https://nodejs.org/) (18 or later)
