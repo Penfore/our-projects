@@ -1,0 +1,158 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur-sm shadow-sm border-b border-indigo-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center py-6 space-y-4 sm:space-y-0">
+        <div class="flex items-center space-x-3">
+          <div class="h-10 w-10 bg-indigo-600 rounded-full flex items-center justify-center">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">Our Projects</h1>
+            <p class="text-sm text-gray-600 hidden sm:block">Manage your projects efficiently</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3">
+          <%= link_to new_project_path, class: "bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl" do %>
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+            <span class="hidden sm:inline">New Project</span>
+            <span class="sm:hidden">New</span>
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :get, class: "text-red-600 hover:text-red-700 px-3 py-2 rounded-lg hover:bg-red-50 transition-colors flex items-center space-x-1" do %>
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+            </svg>
+            <span class="hidden sm:inline">Sign Out</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
+      <div class="bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-200">
+        <div class="flex items-center">
+          <div class="h-12 w-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm font-medium text-gray-600">My Projects</p>
+            <p class="text-lg sm:text-2xl font-bold text-gray-900"><%= @owned_projects.count %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-200">
+        <div class="flex items-center">
+          <div class="h-12 w-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm font-medium text-gray-600">Collaborating</p>
+            <p class="text-lg sm:text-2xl font-bold text-gray-900"><%= @member_projects.count %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-200">
+        <div class="flex items-center">
+          <div class="h-12 w-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm font-medium text-gray-600">Total Cards</p>
+            <p class="text-lg sm:text-2xl font-bold text-gray-900">
+              <%= @owned_projects.sum { |p| p.cards.count } + @member_projects.sum { |p| p.cards.count } %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-200">
+        <div class="flex items-center">
+          <div class="h-12 w-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs sm:text-sm font-medium text-gray-600">Active Projects</p>
+            <p class="text-lg sm:text-2xl font-bold text-gray-900">
+              <%= (@owned_projects + @member_projects).select { |p| p.cards.exists? }.count %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meus Projetos -->
+    <% if @owned_projects.any? %>
+      <div class="mb-8">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900">My Projects</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+          <% @owned_projects.each do |project| %>
+            <%= render 'project_card', project: project, is_owner: true %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <!-- Projetos que Participo -->
+    <% if @member_projects.any? %>
+      <div class="mb-8">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="h-8 w-8 bg-green-600 rounded-lg flex items-center justify-center">
+            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Collaborating Projects</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+          <% @member_projects.each do |project| %>
+            <%= render 'project_card', project: project, is_owner: false %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <!-- Empty State -->
+    <% if @owned_projects.empty? && @member_projects.empty? %>
+      <div class="text-center py-16">
+        <div class="mx-auto h-24 w-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+          <svg class="h-12 w-12 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">No projects yet</h3>
+        <p class="text-gray-600 mb-8 max-w-md mx-auto">Start by creating your first project to organize your tasks and collaborate with your team.</p>
+        <%= link_to new_project_path, class: "inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl" do %>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+          <span>Create Your First Project</span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

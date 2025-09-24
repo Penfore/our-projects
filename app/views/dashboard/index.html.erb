@@ -1,0 +1,110 @@
+<div class="min-h-screen bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-sm border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-6">
+        <div class="flex items-center">
+          <h1 class="text-3xl font-bold text-gray-900">📋 Our Projects</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <%= link_to new_project_path, class: "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2" do %>
+            <span>➕</span>
+            <span>Novo Projeto</span>
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :delete, class: "text-gray-500 hover:text-gray-700" do %>
+            Sair
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats Cards -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center">
+          <div class="text-3xl mr-4">📁</div>
+          <div>
+            <p class="text-sm font-medium text-gray-600">Total de Projetos</p>
+            <p class="text-2xl font-semibold text-gray-900"><%= @project_stats[:total_projects] %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center">
+          <div class="text-3xl mr-4">📝</div>
+          <div>
+            <p class="text-sm font-medium text-gray-600">Total de Cards</p>
+            <p class="text-2xl font-semibold text-gray-900"><%= @project_stats[:total_cards] %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center">
+          <div class="text-3xl mr-4">✅</div>
+          <div>
+            <p class="text-sm font-medium text-gray-600">Cards Concluídos</p>
+            <p class="text-2xl font-semibold text-gray-900"><%= @project_stats[:completed_cards] %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="flex items-center">
+          <div class="text-3xl mr-4">🚀</div>
+          <div>
+            <p class="text-sm font-medium text-gray-600">Projetos Ativos</p>
+            <p class="text-2xl font-semibold text-gray-900"><%= @project_stats[:active_projects] %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-900 mb-6">Seus Projetos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% @projects.each do |project| %>
+          <div class="bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-200">
+            <div class="p-6">
+              <div class="flex items-start justify-between">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2"><%= project.title %></h3>
+                <span class="text-sm text-gray-500"><%= time_ago_in_words(project.updated_at) %> atrás</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4"><%= truncate(project.description, length: 100) %></p>
+
+              <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <span>📋 <%= project.lists.count %> listas</span>
+                <span>📝 <%= project.cards.count %> cards</span>
+              </div>
+
+              <div class="flex space-x-2">
+                <%= link_to project_path(project), class: "flex-1 bg-blue-50 text-blue-700 text-center py-2 px-4 rounded-md hover:bg-blue-100 transition-colors" do %>
+                  Ver Board
+                <% end %>
+                <%= link_to edit_project_path(project), class: "bg-gray-50 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100 transition-colors" do %>
+                  ⚙️
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <!-- Empty State -->
+        <% if @projects.empty? %>
+          <div class="col-span-3 text-center py-12">
+            <div class="text-6xl mb-4">📋</div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Nenhum projeto ainda</h3>
+            <p class="text-gray-600 mb-6">Comece criando seu primeiro projeto para organizar suas tarefas.</p>
+            <%= link_to new_project_path, class: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg" do %>
+              Criar Primeiro Projeto
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

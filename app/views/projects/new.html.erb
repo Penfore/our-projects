@@ -1,0 +1,23 @@
+<div class="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <div>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        Criar Novo Projeto
+      </h2>
+      <p class="mt-2 text-center text-sm text-gray-600">
+        Organize suas tarefas em um board personalizado
+      </p>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-8">
+      <%= render 'form', project: @project %>
+    </div>
+
+    <div class="text-center">
+      <%= link_to projects_path, class: "text-blue-600 hover:text-blue-500" do %>
+        ← Voltar para projetos
+      <% end %>
+    </div>
+  </div>
+</div>
+
