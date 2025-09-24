@@ -4,5 +4,23 @@
 
 import { application } from "./application"
 
+import CardModalController from "./card_modal_controller"
+application.register("card-modal", CardModalController)
+
+import DismissibleController from "./dismissible_controller"
+application.register("dismissible", DismissibleController)
+
+import FlashController from "./flash_controller"
+application.register("flash", FlashController)
+
+import FormController from "./form_controller"
+application.register("form", FormController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import ModalController from "./modal_controller"
+application.register("modal", ModalController)
+
+import SortableController from "./sortable_controller"
+application.register("sortable", SortableController)

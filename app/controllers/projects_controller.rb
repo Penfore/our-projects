@@ -1,17 +1,16 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [ :show, :edit, :update, :destroy ]
+  before_action :authorize_project, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @owned_projects = current_user.owned_projects.includes(:members)
-    @member_projects = current_user.projects.includes(:owner, :members)
+    @owned_projects = current_user.owned_projects.includes(:lists, :cards, :members)
+    @member_projects = current_user.projects.includes(:owner, :lists, :cards, :members)
   end
 
   def show
-    @lists = @project.lists.includes(cards: :assignee)
+    @lists = @project.lists.includes(cards: :assignee).order(:position)
     @new_list = @project.lists.build
-    @new_card = Card.new
   end
 
   def new
@@ -22,7 +21,8 @@ class ProjectsController < ApplicationController
     @project = current_user.owned_projects.build(project_params)
 
     if @project.save
-      redirect_to @project, notice: "Project was successfully created."
+      create_default_lists
+      redirect_to @project, notice: "Projeto criado com sucesso!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -51,10 +51,24 @@ class ProjectsController < ApplicationController
   end
 
   def authorize_project
-    redirect_to projects_path, alert: "You are not authorized to access this project." unless @project.member?(current_user)
+    unless @project.member?(current_user)
+      redirect_to projects_path, alert: "Você não tem permissão para acessar este projeto."
+    end
   end
 
   def project_params
-    params.required(:project).permit(:name, :description)
+    params.require(:project).permit(:title, :description)
+  end
+
+  def create_default_lists
+    default_lists = [
+      { title: "To Do", position: 1 },
+      { title: "In Progress", position: 2 },
+      { title: "Done", position: 3 }
+    ]
+
+    default_lists.each do |list_attrs|
+      @project.lists.create!(list_attrs)
+    end
   end
 end
